@@ -1,0 +1,21 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools >= 61.0"]
+
+[project]
+name = "muxdoc"
+description = "Sphinx extension for standardixing mux documentation"
+authors = [
+    {name = "Andy Kee"},
+]
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+dependencies = ['pydata-sphinx-theme', 'pyyaml', 'uvicorn']
+
+[tool.setuptools]
+packages = ["muxdoc"]
+
+[tool.setuptools.dynamic]
+version = {attr = "muxdoc.__version__"} 

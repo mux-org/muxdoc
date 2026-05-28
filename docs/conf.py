@@ -1,0 +1,2 @@
+project = 'muxdoc'
+extensions = ['muxdoc']

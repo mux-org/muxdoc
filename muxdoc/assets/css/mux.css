@@ -1,0 +1,196 @@
+/* Cruip Gray — pydata-sphinx-theme overrides
+ *
+ * Color system: Tailwind zinc scale
+ *   zinc-50  #fafafa  zinc-100 #f4f4f5  zinc-200 #e4e4e7
+ *   zinc-300 #d4d4d8  zinc-400 #a1a1aa  zinc-500 #71717a
+ *   zinc-600 #52525b  zinc-700 #3f3f46  zinc-800 #27272a
+ *   zinc-900 #18181b  zinc-950 #09090b
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=Inter+Tight:ital,wght@0,500;0,600;0,700;1,700&display=swap');
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+
+:root {
+  --pst-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pst-font-family-heading: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pst-font-family-monospace: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+  --pst-font-weight-heading: 600;
+  --bs-body-font-family: var(--pst-font-family-base);
+  --bs-font-monospace: var(--pst-font-family-monospace);
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+
+.bd-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--pst-color-border);
+}
+
+.bd-header ul.navbar-nav > li.nav-item > .nav-link {
+  color: var(--pst-color-text-base);
+}
+
+.search-button-field:hover {
+  box-shadow: none;
+  background-color: var(--pst-color-surface);
+  border-color: var(--pst-color-border);
+  color: var(--pst-color-text-muted);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--pst-font-family-heading);
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────────────── */
+
+:root,
+html[data-theme="light"] {
+  --sd-color-card-background:     #ffffff;
+  --sd-color-card-border:         #e4e4e7;  /* zinc-200 */
+  --sd-color-card-border-hover:   #d4d4d8;  /* zinc-300 */
+  --sd-color-shadow:              rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="dark"] {
+  --sd-color-card-background:     #27272a;  /* zinc-800 */
+  --sd-color-card-border:         #3f3f46;  /* zinc-700 */
+  --sd-color-card-border-hover:   #52525b;  /* zinc-600 */
+  --sd-color-shadow:              rgba(0, 0, 0, 0.25);
+}
+
+.sd-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.sd-shadow-sm,
+.sd-shadow-md,
+.sd-shadow-lg {
+  box-shadow: none !important;
+}
+
+.sd-card-hover:hover {
+  border-color: var(--sd-color-card-border-hover);
+  transform: none;
+}
+
+.sd-card-title {
+  font-family: var(--pst-font-family-heading);
+  font-weight: 600;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────────────────────── */
+
+.sd-tab-set > .sd-tab-content {
+  border: none !important;
+  border-top: 1px solid var(--pst-color-border) !important;
+  border-bottom: 1px solid var(--pst-color-border) !important;
+  box-shadow: none !important;
+  padding: 1rem 0 1rem 0 !important;
+}
+
+.sd-tab-set > label {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 0.125rem solid transparent !important;
+  border-radius: 0 !important;
+  color: var(--pst-color-text-muted) !important;
+}
+
+.sd-tab-set > input:checked + label {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 0.125rem solid var(--pst-color-primary) !important;
+  border-radius: 0 !important;
+  color: var(--pst-color-primary) !important;
+  transform: none !important;
+}
+
+.sd-tab-set > label:hover {
+  color: var(--pst-color-primary) !important;
+  border-bottom-color: transparent !important;
+  text-decoration: none !important;
+}
+
+/* ── Light mode (zinc light section) ──────────────────────────────────────── */
+
+:root,
+html[data-theme="light"] {
+  --pst-color-background:       #ffffff;
+  --pst-color-on-background:    #ffffff;
+  --pst-color-surface:          #fafafa;
+  --pst-color-on-surface:       #18181b;
+
+  --pst-color-text-base:        #18181b;  /* zinc-900 */
+  --pst-color-text-muted:       #71717a;  /* zinc-500 */
+  --pst-color-heading:          #09090b;  /* zinc-950 */
+
+  --pst-color-border:           #e4e4e7;  /* zinc-200 */
+  --pst-color-border-muted:     rgba(0, 0, 0, 0.05);
+  --pst-color-shadow:           rgba(0, 0, 0, 0.06);
+
+  --pst-color-primary:          #18181b;  /* zinc-900 */
+  --pst-color-primary-bg:       #f4f4f5;  /* zinc-100 */
+  --pst-color-secondary:        #52525b;  /* zinc-600 */
+  --pst-color-secondary-bg:     #e4e4e7;  /* zinc-200 */
+  --pst-color-accent:           #18181b;
+  --pst-color-accent-bg:        #f4f4f5;
+
+  --pst-color-link:             #18181b;
+  --pst-color-link-hover:       #52525b;
+  --pst-color-inline-code:      #52525b;
+  --pst-color-inline-code-links:#18181b;
+  --pst-color-blockquote-notch: #a1a1aa;  /* zinc-400 */
+
+  --pst-color-target:           #e4e4e7;
+
+  --pst-color-table:            #18181b;
+  --pst-color-table-inner-border: #e4e4e7;
+  --pst-color-table-heading-bg: #fafafa;
+  --pst-color-table-row-hover-bg: #f4f4f5;
+  --pst-color-table-outer-border: #fafafa;
+  --pst-color-table-row-zebra-high-bg: #ffffff;
+  --pst-color-table-row-zebra-low-bg:  #fafafa;
+}
+
+/* ── Dark mode (zinc dark section) ───────────────────────────────────────── */
+
+html[data-theme="dark"] {
+  --pst-color-background:       #18181b;  /* zinc-900 */
+  --pst-color-on-background:    #18181b;
+  --pst-color-surface:          #27272a;  /* zinc-800 */
+  --pst-color-on-surface:       #fafafa;
+
+  --pst-color-text-base:        #f4f4f5;  /* zinc-100 */
+  --pst-color-text-muted:       #a1a1aa;  /* zinc-400 */
+  --pst-color-heading:          #fafafa;  /* zinc-50  */
+
+  --pst-color-border:           #3f3f46;  /* zinc-700 */
+  --pst-color-border-muted:     rgba(255, 255, 255, 0.06);
+  --pst-color-shadow:           rgba(0, 0, 0, 0.35);
+
+  --pst-color-primary:          #e4e4e7;  /* zinc-200 */
+  --pst-color-primary-bg:       #3f3f46;  /* zinc-700 */
+  --pst-color-secondary:        #a1a1aa;  /* zinc-400 */
+  --pst-color-secondary-bg:     #3f3f46;  /* zinc-700 */
+  --pst-color-accent:           #f4f4f5;
+  --pst-color-accent-bg:        #3f3f46;
+
+  --pst-color-link:             #e4e4e7;
+  --pst-color-link-hover:       #ffffff;
+  --pst-color-inline-code:      #a1a1aa;
+  --pst-color-inline-code-links:#e4e4e7;
+  --pst-color-blockquote-notch: #52525b;  /* zinc-600 */
+
+  --pst-color-target:           #3f3f46;
+
+  --pst-color-table:            #f4f4f5;
+  --pst-color-table-inner-border: #3f3f46;
+  --pst-color-table-heading-bg: #27272a;
+  --pst-color-table-row-hover-bg: #3f3f46;
+  --pst-color-table-outer-border: #27272a;
+  --pst-color-table-row-zebra-high-bg: #18181b;
+  --pst-color-table-row-zebra-low-bg:  #27272a;
+}
