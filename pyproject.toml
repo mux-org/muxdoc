@@ -12,7 +12,12 @@ readme = "README.rst"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
 dynamic = ["version"]
-dependencies = ['pydata-sphinx-theme', 'pyyaml', 'uvicorn']
+dependencies = ['pydata-sphinx-theme', 
+                'pyyaml',
+                'sphinx-design',
+                'sphinx-copybutton',
+                'sphinxcontrib-openapi',
+                'uvicorn']
 
 [tool.setuptools]
 packages = ["muxdoc"]
