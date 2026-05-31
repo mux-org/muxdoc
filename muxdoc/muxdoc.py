@@ -9,23 +9,18 @@ print(MUXDOC_ASSETS_DIR)
 
 
 def setup(app):
+    config = app.config
 
     # REMINDER
     # these values override whatever is set in conf!
-
-    config = app.config
-
-    config.project = 'mux'
-    config.copyright = '%Y, California Institute of Technology'
-    config.author = 'Andy Kee'
-
+    # to define, add a setup() function in your conf.py
     config.extensions.append('sphinx.ext.autodoc')
     config.extensions.append('sphinx.ext.todo')
     config.extensions.append('sphinx_design')
     config.extensions.append('sphinx_copybutton')
     config.extensions.append('sphinxcontrib.openapi')
 
-    config.templates_path = ['_templates']
+    config.templates_path = ['templates']
     config.exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
     config.suppress_warnings.append('toc.not_included')
