@@ -65,7 +65,7 @@ def setup(app):
     config.extensions.append('sphinx_copybutton')
     config.extensions.append('sphinxcontrib.openapi')
 
-    config.templates_path = ['templates']
+    config.templates_path = ['_templates']
     config.exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
     config.suppress_warnings.append('toc.not_included')
