@@ -6,7 +6,7 @@ from uvicorn.importer import import_from_string
 
 def dump_openapi(app='main:app', app_dir=None, out='openapi.yaml'):
     # https://www.doctave.com/blog/python-export-fastapi-openapi-spec
-    if app_dir is not None:
+    if app_dir is not None and app_dir not in sys.path:
         print(f"adding {app_dir} to sys.path")
         sys.path.insert(0, app_dir)
 
